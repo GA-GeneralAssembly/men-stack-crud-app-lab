@@ -1,0 +1,21 @@
+<!-- views/cars/new.ejs -->
+
+<body>
+  <h1>Create a New Car!</h1>
+  <form action="/cars" method="POST">
+
+    <label for="brand">Car Brand:</label>
+    <input type="text" name="brand" id="brand" />
+
+    <label for="model">Car Model:</label>
+    <input type="text" name="model" id="model" />
+
+    <label for="year">Car Make Year:</label>
+    <input type="number" name="year" id="year" />
+
+    <button type="submit">Add Car</button>
+
+    <a href="/cars/">Back to the Cars Collection</a>
+
+  </form>
+</body>

@@ -1,0 +1,28 @@
+<!-- views/car/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= car.brand %></title> <!-- Dynamic title based on car name -->
+  </head>
+  <body>
+    <h1> CAR DETAILS</h1> 
+    <!-- Add more details about the car here -->
+    <p> CAR BRAND: <%=car.brand%> </p>
+    <p> CAR MODEL: <%= car.model %> </p>
+    <p> CAR YEAR: <%= car.year %> </p>
+
+
+    <!-- new delete button -->
+    <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= car.model %></button>
+    </form>
+    <br>
+    <!-- add edit page link here -->
+  <a href="/cars/<%= car._id %>/edit">Edit <%= car.model %></a>
+  <br>
+  <a href="/cars/">Back to Cars Collection</a>
+  </body>
+</html>
